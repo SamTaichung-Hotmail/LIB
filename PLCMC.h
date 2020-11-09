@@ -60,7 +60,7 @@ AUTOMALIB_API class MPLCMC : public MPLC
 		unsigned short StationNo;
 		unsigned short PcNo;
 		unsigned short Command;
-		byte* StartAddr_bytes;
+		byte StartAddr_bytes[6];
 		byte RequestTime;//
 		byte RegisterID;
 		unsigned short EndSign;//0x0D , 0x0A
@@ -183,8 +183,7 @@ protected:
 	WORD m_wdErrorCode;
 	PLCComStatus m_plsStatus;
 
-	byte* ConvertAddr2KVHex(unsigned long addr, bool isMRBytes, int count);
-	byte* ConvertData2KVHex(WORD data);
+	void ConvertAddr2KVHex(unsigned long addr, bool isMRBytes, int count, byte* bytes);
 	WORD ConvertKVHex2Data(WORD data);
 };
 }//namespace AutoLib

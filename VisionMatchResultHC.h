@@ -16,10 +16,17 @@ namespace AutoLib {
 		AUTOMAVHC_API ~MVisionMatchResultHC(void);
 		HTuple m_htHomMat2D;
 		HRegion m_hCheckRegion;
+		int m_intCheckGapAlgorithm;
 		bool m_bGapCheck;
 		double m_dblGapStartAngle, m_dblGapEndAngle;
 		double m_dblMinGapAngle;
 		DCoordinate m_cdGapStartPoint;
 		DCoordinate m_cdGapEndPoint;
+		HObject m_hoContours;
+		//double m_dblLineFunctionPa, m_dblLineFunctionPb, m_dblLineFunctionPc;
+		double m_dblLineX, m_dblLineY, m_dblLineAngRad, m_dblLineAngDeg;
+		bool m_bFitLine;
+		bool m_bDxfMatch;
+		double m_dblObjectScale, m_dblObjectLength1, m_dblObjectLength2;
 	};
 }

@@ -24,6 +24,9 @@ namespace AutoLib {
 			ptCircleFitMark,
 			ptSigleCircle,
 			ptRing,
+			ptDxf,
+			ptFitLineVertical, 
+			ptFitLineHorizontal,
 		};
 		enum RegionFunction {
 			rfROI,
@@ -66,6 +69,11 @@ namespace AutoLib {
 		AUTOMALIB_API virtual void SetAreaCheckThreshold(int intAreaCheckThreshold);
 		AUTOMALIB_API virtual AreaCheckPolarity GetAreaCheckPolarity();
 		AUTOMALIB_API virtual void SetAreaCheckPolarity(AreaCheckPolarity acpPolarity);
+
+		AUTOMALIB_API virtual bool GetMultipleAreaCheck();
+		AUTOMALIB_API virtual void SetMultipleAreaCheck(bool bAreaCheck);
+		AUTOMALIB_API virtual int GetAreaCheckScale();
+		AUTOMALIB_API virtual void SetAreaCheckScale(int intAreaCheckScale);
 		CString m_strName;
 	protected:
 		CArray<RegionFunction> m_RegionFuns;
@@ -77,9 +85,11 @@ namespace AutoLib {
 		PatternType m_ptPatternType;
 		bool m_bRangeLimmited;
 		bool m_bAreaCheck;
+		bool m_bMultipleAreaCheck;
 		int m_intAreaCheckThreshold;
 		int m_intAreaCheckJudgeStart;
 		int m_intAreaCheckJudgeEnd;
+		int m_intAreaCheckScale;
 		AreaCheckPolarity m_acpAreaCheckPolarity;
 	};
 }

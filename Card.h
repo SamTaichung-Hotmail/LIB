@@ -16,7 +16,6 @@ namespace AutoLib{
 		AUTOMALIB_API virtual ~MCard();
 		AUTOMALIB_API virtual bool Open();
 		AUTOMALIB_API virtual void Close();
-		AUTOMALIB_API virtual bool isOpen();
 	protected:
 		bool m_isOpen;
 	};
