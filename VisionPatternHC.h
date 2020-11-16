@@ -38,6 +38,8 @@ public:
 	AUTOMAVHC_API virtual void SetPatternLength2(double dblPatternLength2);
 	AUTOMAVHC_API virtual void SetDispPatternType(bool bPatternType);
 	AUTOMAVHC_API virtual bool GetDispPatternType();
+	AUTOMAVHC_API virtual double GetPatternCenterRow();
+	AUTOMAVHC_API virtual double GetPatternCenterColumn();
 	HRegion m_hShapeModelTrans;
 	HImage m_hImage, m_hImageReduced;
 	HTuple m_hModel;
