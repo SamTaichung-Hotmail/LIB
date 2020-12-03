@@ -88,6 +88,8 @@ public:
 		ErrOpenTimeOut,
 		ErrCloseTimeOut,
 		ErrNotSafe,		
+		ErrOpenSensorErr,
+		ErrCloseSensorErr,
 	};
 	CString m_strOpenStatus,m_strCloseStatus;
 protected:
