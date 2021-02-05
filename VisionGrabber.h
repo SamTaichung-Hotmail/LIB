@@ -17,6 +17,7 @@ public:
 		ct_File,
 		ct_DirectShow,
 		ct_BaslerGigaEtherNet,
+		ct_USB,
 	};
 	AUTOMALIB_API MVisionGrabber(MVisionLib* pLib);
 	AUTOMALIB_API virtual ~MVisionGrabber();

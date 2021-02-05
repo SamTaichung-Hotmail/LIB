@@ -95,6 +95,7 @@ public:
 protected:
 	MError* OnError(ErrorCode code, int RetryStep, CString strReason);
 	int m_RetryStep;	
+	int m_SensorTestCount;
 	ValveMode m_vmMode;
 
 	ValveStyle m_vsStyle;
